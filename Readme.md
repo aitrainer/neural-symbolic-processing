@@ -18,3 +18,7 @@
 第六章 强化学习
 
 第七章 迁移学习
+
+
+参考资料：
+https://github.com/crownpku

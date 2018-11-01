@@ -20,7 +20,8 @@
 第七章 迁移学习
 
 
-参考资料：
+## 参考资料
 [中文Deep Learning Book](https://github.com/exacity/deeplearningbook-chinese)
+
 [Speech and Language Processing (3rd ed. draft)](https://web.stanford.edu/~jurafsky/slp3/)
 

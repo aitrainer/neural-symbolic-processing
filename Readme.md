@@ -6,5 +6,7 @@
 另外，个人能力毕竟有限，也欢迎有兴趣者加入和积极讨论，email:[aitrainer@foxmail.com](aitrainer@foxmail.com).
 
 第一章 [数学基础](https://github.com/aitrainer/neural-symbolic-processing/blob/master/1_mathematics.md)
+
 第二章 机器学习基础
+
 第三章 深度学习基础

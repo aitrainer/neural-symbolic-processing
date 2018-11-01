@@ -63,6 +63,15 @@
 $$
 Av =\lambda v
 $$
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mi>v</mi>
+  <mo>=</mo>
+  <mi>&#x03BB;<!-- λ --></mi>
+  <mi>v</mi>
+</math>
+
 $\lambda$为特征向量 $v$ 对应的特征值。 特征值分解是将一个矩阵分解为如下形式：
 $$
 A=Q\Sigma Q^{-1}

@@ -21,4 +21,6 @@
 
 
 参考资料：
-https://github.com/crownpku
+[中文Deep Learning Book](https://github.com/exacity/deeplearningbook-chinese)
+[Speech and Language Processing (3rd ed. draft)](https://web.stanford.edu/~jurafsky/slp3/)
+

@@ -59,11 +59,6 @@
 ## 1.8 特征值分解与特征向量
 特征值分解可以得到特征值与特征向量， 特征值表示的是这个特征到底有多重要， 而特征向量表示这个特征是什么。
 如果说一个向量$v$是方阵$A$ 的特征向量， 将一定可以表示成下面的形式：
-
-$$
-Av =\lambda v
-$$
-
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>A</mi>
   <mi>v</mi>
@@ -73,28 +68,108 @@ $$
 </math>
 
 $\lambda$为特征向量 $v$ 对应的特征值。 特征值分解是将一个矩阵分解为如下形式：
-$$
-A=Q\Sigma Q^{-1}
-$$
-
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mi>Q</mi>
+  <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+  <msup>
+    <mi>Q</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mo>&#x2212;<!-- − --></mo>
+      <mn>1</mn>
+    </mrow>
+  </msup>
+</math>
 
 其中， Q是这个矩阵 A的特征向量组成的矩阵， $\sum$是一个对角矩阵， 每一个对角线元素就是一个特征值， 里面的特征值是由大到小排列的， 这些特征值所对应的特征向量就是描述这个矩阵变化方向（从主要的变化到次要的变化排列）。 也就是说矩阵 A的信息可以由其特征值和特征向量表示。
 对于矩阵为高维的情况下， 那么这个矩阵就是高维空间下的一个线性变换。 可以想象， 这个变换也同样有很多的变换方向， 我们通过特征值分解得到的前 N 个特征向量， 那么就对应了这个矩阵最主要的 N 个变化方向。 我们利用这前 N 个变化方向， 就可以近似这个矩阵（变换）。
 
 ## 1.9 奇异值与特征值有什么关系？
 那么奇异值和特征值是怎么对应起来的呢？ 我们将一个矩阵 A的转置乘以 A， 并对 $AA^T$ 求特征值， 则有下面的形式：
-$$
-(A^TA)V=\lambda V
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>A</mi>
+    <mi>T</mi>
+  </msup>
+  <mi>A</mi>
+  <mo stretchy="false">)</mo>
+  <mi>V</mi>
+  <mo>=</mo>
+  <mi>&#x03BB;<!-- λ --></mi>
+  <mi>V</mi>
+</math>
 这里V 就是上面的右奇异向量， 另外还有：
-$$
-\sigma_i = \sqrt{\lambda_i}, u_i = \frac{1}{\sigma_i}Av_i
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>&#x03C3;<!-- σ --></mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <msqrt>
+    <msub>
+      <mi>&#x03BB;<!-- λ --></mi>
+      <mi>i</mi>
+    </msub>
+  </msqrt>
+  <mo>,</mo>
+  <msub>
+    <mi>u</mi>
+    <mi>i</mi>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <msub>
+      <mi>&#x03C3;<!-- σ --></mi>
+      <mi>i</mi>
+    </msub>
+  </mfrac>
+  <mi>A</mi>
+  <msub>
+    <mi>v</mi>
+    <mi>i</mi>
+  </msub>
+</math>
 这里的σ 就是奇异值， u 就是上面说的左奇异向量。奇异值σ 跟特征值类似， 在矩阵Σ 中也是从大到小排列， 而且σ 的减少特别的快， 在很多情况下， 前 10%甚至 1%的奇异值的和就占了全部的奇异值之和的 99%以上了。 也就是说， 我
 们也可以用前 r（ r 远小于 m、 n ） 个的奇异值来近似描述矩阵， 即部分奇异值分解：
-$$
-A_(m\times n)  \approx U_{m\times r}\Sigma_{r \times r} V_{r\times n}^T
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>A</mi>
+    <mo stretchy="false">(</mo>
+  </msub>
+  <mi>m</mi>
+  <mo>&#x00D7;<!-- × --></mo>
+  <mi>n</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2248;<!-- ≈ --></mo>
+  <msub>
+    <mi>U</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>m</mi>
+      <mo>&#x00D7;<!-- × --></mo>
+      <mi>r</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>r</mi>
+      <mo>&#x00D7;<!-- × --></mo>
+      <mi>r</mi>
+    </mrow>
+  </msub>
+  <msubsup>
+    <mi>V</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi>r</mi>
+      <mo>&#x00D7;<!-- × --></mo>
+      <mi>n</mi>
+    </mrow>
+    <mi>T</mi>
+  </msubsup>
+</math>
 
 
 右边的三个矩阵相乘的结果将会是一个接近于 A 的矩阵， 在这儿， r 越接近于 n， 则相乘的结果越接近于 A。
